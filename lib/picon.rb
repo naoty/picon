@@ -1,5 +1,6 @@
-require "picon/version"
+p $LOAD_PATH
 
 module Picon
-  # Your code goes here...
+  autoload :Command, "picon/command"
+  autoload :Generator, "picon/generator"
 end

@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require "picon"
+Picon::Command.run(ARGV)
