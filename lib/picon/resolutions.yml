@@ -1,0 +1,31 @@
+iphone:
+  ios6:
+    noretina:
+      filename: "Icon.png"
+      size: 57
+    retina:
+      filename: "Icon@2x.png"
+      size: 114
+  ios7:
+    noretina:
+      filename: "Icon-60.png"
+      size: 60
+    retina:
+      filename: "Icon-60@2x.png"
+      size: 120
+ipad:
+  ios6:
+    noretina:
+      filename: "Icon-72.png"
+      size: 72
+    retina:
+      filename: "Icon-72@2x.png"
+      size: 144
+  ios7:
+    noretina:
+      filename: "Icon-76.png"
+      size: 76
+    retina:
+      filename: "Icon-76@2x.png"
+      size: 76
+
