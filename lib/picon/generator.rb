@@ -79,12 +79,25 @@ module Picon
       contents["info"] = { "version" => 1, "author" => "picon" }
 
       filepath = @appiconset_path.join("Contents.json")
-      File.open(filepath.to_s, "wb") do |file|
+      filepath.open("wb") do |file|
         file << JSON.pretty_generate(contents)
       end
     end
 
     def edit_project_pbxproj
+      data = ""
+
+      pbxproj_path = Pathname.glob("**/project.pbxproj").first
+      pbxproj_path.open("rb") do |file|
+        data = file.read
+      end
+
+      data.gsub!(/(ASSETCATALOG_COMPILER_APPICON_NAME = )AppIcon/) { "#{$1}Picon" }
+
+      pbxproj_path.open("wb") do |file|
+        file.flush
+        file << data
+      end
     end
   end
 end
