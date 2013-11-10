@@ -1,31 +1,31 @@
 iphone:
-  ios6:
-    noretina:
-      filename: "Icon.png"
-      size: 57
-    retina:
-      filename: "Icon@2x.png"
-      size: 114
-  ios7:
-    noretina:
-      filename: "Icon-60.png"
-      size: 60
-    retina:
-      filename: "Icon-60@2x.png"
-      size: 120
+  - size: 58
+    filename: "Icon-29@2x.png"
+    scale: "2x"
+  - size: 80
+    filename: "Icon-40@2x.png"
+    scale: "2x"
+  - size: 120
+    filename: "Icon-60@2x.png"
+    scale: "2x"
+
 ipad:
-  ios6:
-    noretina:
-      filename: "Icon-72.png"
-      size: 72
-    retina:
-      filename: "Icon-72@2x.png"
-      size: 144
-  ios7:
-    noretina:
-      filename: "Icon-76.png"
-      size: 76
-    retina:
-      filename: "Icon-76@2x.png"
-      size: 76
+  - size: 29
+    filename: "Icon-29.png"
+    scale: "1x"
+  - size: 58
+    filename: "Icon-29@2x.png"
+    scale: "2x"
+  - size: 40
+    filename: "Icon-40.png"
+    scale: "1x"
+  - size: 80
+    filename: "Icon-40@2x.png"
+    scale: "2x"
+  - size: 76
+    filename: "Icon-76.png"
+    scale: "1x"
+  - size: 152
+    filename: "Icon-76@2x.png"
+    scale: "2x"
 

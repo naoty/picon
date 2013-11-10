@@ -19,7 +19,7 @@ module Picon
 
     def run
       generate_identicons
-      edit_contents_json
+      generate_contents_json
       edit_project_pbxproj
     end
 
@@ -45,20 +45,43 @@ module Picon
 
     def generate_identicons
       resolutions = YAML.load_file(RESOLUTIONS_LIST_PATH)
-      resolutions.each do |device, info|
-        info.each do |os, info|
-          info.each do |display, info|
-            filepath = @appiconset_path.join(info["filename"])
-            grid_size = 7
-            square_size = info["size"].to_i / grid_size
-            border_size = ((info["size"].to_i - grid_size * square_size).to_f / 2).ceil
-            RubyIdenticon.create_and_save(@bundle_identifier, filepath, border_size: border_size, grid_size: grid_size, square_size: square_size)
-          end
+      resolutions.each do |device, images|
+        images.each do |image|
+          filepath = @appiconset_path.join(image["filename"])
+          next if filepath.exist?
+
+          grid_size = 7
+          square_size = image["size"].to_i / grid_size
+          border_size = ((image["size"].to_i - grid_size * square_size).to_f / 2).ceil
+          RubyIdenticon.create_and_save(@bundle_identifier, filepath, border_size: border_size, grid_size: grid_size, square_size: square_size)
         end
       end
     end
 
-    def edit_contents_json
+    def generate_contents_json
+      contents = { "images" => [] }
+
+      resolutions = YAML.load_file(RESOLUTIONS_LIST_PATH)
+      resolutions.each do |device, properties|
+        properties.each do |property|
+          size = property["size"].to_i
+          size /= 2 if property["scale"] == "2x"
+
+          image = {}
+          image["idiom"] = device
+          image["filename"] = property["filename"]
+          image["size"] = "#{size}x#{size}"
+          image["scale"] = property["scale"]
+          contents["images"] << image
+        end
+      end
+
+      contents["info"] = { "version" => 1, "author" => "picon" }
+
+      filepath = @appiconset_path.join("Contents.json")
+      File.open(filepath.to_s, "wb") do |file|
+        file << JSON.pretty_generate(contents)
+      end
     end
 
     def edit_project_pbxproj
