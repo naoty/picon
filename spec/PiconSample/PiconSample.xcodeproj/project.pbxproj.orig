@@ -1,0 +1,489 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DE222C9182FD607003DD33D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE222C8182FD607003DD33D /* Foundation.framework */; };
+		3DE222CB182FD607003DD33D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE222CA182FD607003DD33D /* CoreGraphics.framework */; };
+		3DE222CD182FD607003DD33D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE222CC182FD607003DD33D /* UIKit.framework */; };
+		3DE222D3182FD607003DD33D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE222D1182FD607003DD33D /* InfoPlist.strings */; };
+		3DE222D5182FD607003DD33D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE222D4182FD607003DD33D /* main.m */; };
+		3DE222D9182FD607003DD33D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE222D8182FD607003DD33D /* AppDelegate.m */; };
+		3DE222DC182FD607003DD33D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE222DA182FD607003DD33D /* Main_iPhone.storyboard */; };
+		3DE222DF182FD607003DD33D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DE222DD182FD607003DD33D /* Main_iPad.storyboard */; };
+		3DE222E2182FD607003DD33D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE222E1182FD607003DD33D /* ViewController.m */; };
+		3DE222E4182FD607003DD33D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DE222E3182FD607003DD33D /* Images.xcassets */; };
+		3DE222EB182FD608003DD33D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE222EA182FD608003DD33D /* XCTest.framework */; };
+		3DE222EC182FD608003DD33D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE222C8182FD607003DD33D /* Foundation.framework */; };
+		3DE222ED182FD608003DD33D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DE222CC182FD607003DD33D /* UIKit.framework */; };
+		3DE222F5182FD608003DD33D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3DE222F3182FD608003DD33D /* InfoPlist.strings */; };
+		3DE222F7182FD608003DD33D /* PiconSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE222F6182FD608003DD33D /* PiconSampleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3DE222EE182FD608003DD33D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3DE222BD182FD607003DD33D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3DE222C4182FD607003DD33D;
+			remoteInfo = PiconSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3DE222C5182FD607003DD33D /* PiconSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PiconSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE222C8182FD607003DD33D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3DE222CA182FD607003DD33D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3DE222CC182FD607003DD33D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3DE222D0182FD607003DD33D /* PiconSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PiconSample-Info.plist"; sourceTree = "<group>"; };
+		3DE222D2182FD607003DD33D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DE222D4182FD607003DD33D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3DE222D6182FD607003DD33D /* PiconSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PiconSample-Prefix.pch"; sourceTree = "<group>"; };
+		3DE222D7182FD607003DD33D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3DE222D8182FD607003DD33D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3DE222DB182FD607003DD33D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		3DE222DE182FD607003DD33D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		3DE222E0182FD607003DD33D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3DE222E1182FD607003DD33D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3DE222E3182FD607003DD33D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3DE222E9182FD608003DD33D /* PiconSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PiconSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DE222EA182FD608003DD33D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3DE222F2182FD608003DD33D /* PiconSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PiconSampleTests-Info.plist"; sourceTree = "<group>"; };
+		3DE222F4182FD608003DD33D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3DE222F6182FD608003DD33D /* PiconSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PiconSampleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3DE222C2182FD607003DD33D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE222CB182FD607003DD33D /* CoreGraphics.framework in Frameworks */,
+				3DE222CD182FD607003DD33D /* UIKit.framework in Frameworks */,
+				3DE222C9182FD607003DD33D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE222E6182FD608003DD33D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE222EB182FD608003DD33D /* XCTest.framework in Frameworks */,
+				3DE222ED182FD608003DD33D /* UIKit.framework in Frameworks */,
+				3DE222EC182FD608003DD33D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3DE222BC182FD607003DD33D = {
+			isa = PBXGroup;
+			children = (
+				3DE222CE182FD607003DD33D /* PiconSample */,
+				3DE222F0182FD608003DD33D /* PiconSampleTests */,
+				3DE222C7182FD607003DD33D /* Frameworks */,
+				3DE222C6182FD607003DD33D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3DE222C6182FD607003DD33D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3DE222C5182FD607003DD33D /* PiconSample.app */,
+				3DE222E9182FD608003DD33D /* PiconSampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3DE222C7182FD607003DD33D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DE222C8182FD607003DD33D /* Foundation.framework */,
+				3DE222CA182FD607003DD33D /* CoreGraphics.framework */,
+				3DE222CC182FD607003DD33D /* UIKit.framework */,
+				3DE222EA182FD608003DD33D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3DE222CE182FD607003DD33D /* PiconSample */ = {
+			isa = PBXGroup;
+			children = (
+				3DE222D7182FD607003DD33D /* AppDelegate.h */,
+				3DE222D8182FD607003DD33D /* AppDelegate.m */,
+				3DE222DA182FD607003DD33D /* Main_iPhone.storyboard */,
+				3DE222DD182FD607003DD33D /* Main_iPad.storyboard */,
+				3DE222E0182FD607003DD33D /* ViewController.h */,
+				3DE222E1182FD607003DD33D /* ViewController.m */,
+				3DE222E3182FD607003DD33D /* Images.xcassets */,
+				3DE222CF182FD607003DD33D /* Supporting Files */,
+			);
+			path = PiconSample;
+			sourceTree = "<group>";
+		};
+		3DE222CF182FD607003DD33D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DE222D0182FD607003DD33D /* PiconSample-Info.plist */,
+				3DE222D1182FD607003DD33D /* InfoPlist.strings */,
+				3DE222D4182FD607003DD33D /* main.m */,
+				3DE222D6182FD607003DD33D /* PiconSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3DE222F0182FD608003DD33D /* PiconSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DE222F6182FD608003DD33D /* PiconSampleTests.m */,
+				3DE222F1182FD608003DD33D /* Supporting Files */,
+			);
+			path = PiconSampleTests;
+			sourceTree = "<group>";
+		};
+		3DE222F1182FD608003DD33D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3DE222F2182FD608003DD33D /* PiconSampleTests-Info.plist */,
+				3DE222F3182FD608003DD33D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3DE222C4182FD607003DD33D /* PiconSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE222FA182FD608003DD33D /* Build configuration list for PBXNativeTarget "PiconSample" */;
+			buildPhases = (
+				3DE222C1182FD607003DD33D /* Sources */,
+				3DE222C2182FD607003DD33D /* Frameworks */,
+				3DE222C3182FD607003DD33D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PiconSample;
+			productName = PiconSample;
+			productReference = 3DE222C5182FD607003DD33D /* PiconSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3DE222E8182FD608003DD33D /* PiconSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DE222FD182FD608003DD33D /* Build configuration list for PBXNativeTarget "PiconSampleTests" */;
+			buildPhases = (
+				3DE222E5182FD608003DD33D /* Sources */,
+				3DE222E6182FD608003DD33D /* Frameworks */,
+				3DE222E7182FD608003DD33D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3DE222EF182FD608003DD33D /* PBXTargetDependency */,
+			);
+			name = PiconSampleTests;
+			productName = PiconSampleTests;
+			productReference = 3DE222E9182FD608003DD33D /* PiconSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3DE222BD182FD607003DD33D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Naoto Kaneko";
+				TargetAttributes = {
+					3DE222E8182FD608003DD33D = {
+						TestTargetID = 3DE222C4182FD607003DD33D;
+					};
+				};
+			};
+			buildConfigurationList = 3DE222C0182FD607003DD33D /* Build configuration list for PBXProject "PiconSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3DE222BC182FD607003DD33D;
+			productRefGroup = 3DE222C6182FD607003DD33D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3DE222C4182FD607003DD33D /* PiconSample */,
+				3DE222E8182FD608003DD33D /* PiconSampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DE222C3182FD607003DD33D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE222DF182FD607003DD33D /* Main_iPad.storyboard in Resources */,
+				3DE222E4182FD607003DD33D /* Images.xcassets in Resources */,
+				3DE222DC182FD607003DD33D /* Main_iPhone.storyboard in Resources */,
+				3DE222D3182FD607003DD33D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE222E7182FD608003DD33D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE222F5182FD608003DD33D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DE222C1182FD607003DD33D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE222E2182FD607003DD33D /* ViewController.m in Sources */,
+				3DE222D9182FD607003DD33D /* AppDelegate.m in Sources */,
+				3DE222D5182FD607003DD33D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DE222E5182FD608003DD33D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DE222F7182FD608003DD33D /* PiconSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3DE222EF182FD608003DD33D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3DE222C4182FD607003DD33D /* PiconSample */;
+			targetProxy = 3DE222EE182FD608003DD33D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3DE222D1182FD607003DD33D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE222D2182FD607003DD33D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3DE222DA182FD607003DD33D /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE222DB182FD607003DD33D /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		3DE222DD182FD607003DD33D /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE222DE182FD607003DD33D /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		3DE222F3182FD608003DD33D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3DE222F4182FD608003DD33D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3DE222F8182FD608003DD33D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3DE222F9182FD608003DD33D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3DE222FB182FD608003DD33D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PiconSample/PiconSample-Prefix.pch";
+				INFOPLIST_FILE = "PiconSample/PiconSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3DE222FC182FD608003DD33D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PiconSample/PiconSample-Prefix.pch";
+				INFOPLIST_FILE = "PiconSample/PiconSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3DE222FE182FD608003DD33D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PiconSample.app/PiconSample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PiconSample/PiconSample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PiconSampleTests/PiconSampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		3DE222FF182FD608003DD33D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/PiconSample.app/PiconSample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PiconSample/PiconSample-Prefix.pch";
+				INFOPLIST_FILE = "PiconSampleTests/PiconSampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DE222C0182FD607003DD33D /* Build configuration list for PBXProject "PiconSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE222F8182FD608003DD33D /* Debug */,
+				3DE222F9182FD608003DD33D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DE222FA182FD608003DD33D /* Build configuration list for PBXNativeTarget "PiconSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE222FB182FD608003DD33D /* Debug */,
+				3DE222FC182FD608003DD33D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3DE222FD182FD608003DD33D /* Build configuration list for PBXNativeTarget "PiconSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DE222FE182FD608003DD33D /* Debug */,
+				3DE222FF182FD608003DD33D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3DE222BD182FD607003DD33D /* Project object */;
+}

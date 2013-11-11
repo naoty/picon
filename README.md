@@ -12,7 +12,7 @@ $ gem install picon
 
 At the root of Xcode project,
 
-```
+```sh
 $ picon generate
 ```
 
