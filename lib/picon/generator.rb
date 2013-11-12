@@ -12,7 +12,14 @@ module Picon
       new.run
     end
 
-    def initialize
+    def initialize(args = {})
+      if args[:current_path]
+        @current_path = Pathname.new(File.expand_path(args[:current_path]))
+      else
+        @current_path = Pathname.pwd
+      end
+
+      @product_name = get_product_name
       @appiconset_path = get_appiconset_path
       @bundle_identifier = get_bundle_identifier
     end
@@ -25,22 +32,24 @@ module Picon
 
     private
 
+    def get_product_name
+      xcodeproj_path = Pathname.glob(@current_path.to_s + "/**/*.xcodeproj").first
+      File.basename(xcodeproj_path.to_s, ".xcodeproj")
+    end
+
     def get_appiconset_path
-      path = Pathname.glob("**/*.xcassets").first
+      path = Pathname.glob(@current_path.to_s + "/**/*.xcassets").first
       path = path.join("Picon.appiconset")
       path.mkdir unless path.exist?
       path
     end
 
     def get_bundle_identifier
-      xcodeproj_path = Pathname.glob("**/*.xcodeproj").first
-      product_name = File.basename(xcodeproj_path.to_s, ".xcodeproj")
-
-      pathnames = Pathname.glob("**/*-Info.plist")
+      pathnames = Pathname.glob(@current_path.to_s + "/**/*-Info.plist")
       pathnames.reject! { |pathname| pathname.to_s =~ /Test/ }
       pathname = pathnames.first
       plist = Plist.parse_xml(pathname.to_s)
-      plist["CFBundleIdentifier"].gsub!(/\${PRODUCT_NAME.*}$/) { product_name }
+      plist["CFBundleIdentifier"].gsub!(/\${PRODUCT_NAME.*}$/) { @product_name }
     end
 
     def generate_identicons
@@ -87,12 +96,17 @@ module Picon
     def edit_project_pbxproj
       data = ""
 
-      pbxproj_path = Pathname.glob("**/project.pbxproj").first
+      pbxproj_path = Pathname.glob(@current_path.to_s + "/**/project.pbxproj").first
       pbxproj_path.open("rb") do |file|
         data = file.read
       end
 
-      data.gsub!(/(ASSETCATALOG_COMPILER_APPICON_NAME = )AppIcon/) { "#{$1}Picon" }
+      xcworkspace_path = Pathname.glob(@current_path.to_s + "/**/#{@product_name}.xcworkspace").first
+      if xcworkspace_path && xcworkspace_path.exist?
+        data.gsub!(/(<key>ASSETCATALOG_COMPILER_APPICON_NAME<\/key>\n\t+<string>).+(<\/string>)/) { "#{$1}Picon#{$2}" }
+      else
+        data.gsub!(/(ASSETCATALOG_COMPILER_APPICON_NAME = )AppIcon/) { "#{$1}Picon" }
+      end
 
       pbxproj_path.open("wb") do |file|
         file.flush

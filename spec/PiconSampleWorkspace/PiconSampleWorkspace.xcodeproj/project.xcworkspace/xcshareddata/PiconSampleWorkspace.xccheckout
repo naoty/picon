@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>663857BC-FDC7-462A-B4A0-CB4DA31C1F11</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PiconSampleWorkspace</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>AAF57CBF-6712-463F-97FC-4A0B04F629AD</key>
+		<string>ssh://github.com/naoty/picon.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>spec/PiconSampleWorkspace/PiconSampleWorkspace.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>AAF57CBF-6712-463F-97FC-4A0B04F629AD</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/naoty/picon.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>AAF57CBF-6712-463F-97FC-4A0B04F629AD</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>AAF57CBF-6712-463F-97FC-4A0B04F629AD</string>
+			<key>IDESourceControlWCCName</key>
+			<string>picon</string>
+		</dict>
+	</array>
+</dict>
+</plist>

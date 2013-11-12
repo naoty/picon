@@ -6,6 +6,10 @@ This gem generates [identicons](http://en.wikipedia.org/wiki/Identicon) for iOS 
 
 ![picon_after.png](images/picon_after.png)
 
+## Requirements
+
+- Xcode 5.0 or later
+
 ## Installation
 
 ```sh
