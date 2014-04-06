@@ -102,7 +102,9 @@ module Picon
       end
 
       xcworkspace_path = Pathname.glob(@current_path.to_s + "/**/#{@product_name}.xcworkspace").first
-      data.gsub!(/(ASSETCATALOG_COMPILER_APPICON_NAME = )AppIcon/) { "#{$1}Picon" }
+
+      data.gsub!(/(<key>ASSETCATALOG_COMPILER_APPICON_NAME<\/key>\n\t+<string>).+(<\/string>)/) { "#{$1}Picon#{$2}" } # for plist format
+      data.gsub!(/(ASSETCATALOG_COMPILER_APPICON_NAME = )AppIcon/) { "#{$1}Picon" } # for OpenStep format
 
       pbxproj_path.open("wb") do |file|
         file.flush
