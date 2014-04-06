@@ -32,22 +32,33 @@ module Picon
 
     private
 
+    def get_shallowest_filepath(path)
+      pathnames = Pathname.glob(path)
+      pathnames.reject! { |pathname| pathname.to_s =~ /Test/ }
+
+      unless pathnames.empty?
+        # pick shallowest file to avoid selecting submodule's one
+        lengths = pathnames.map { |pathname| pathname.to_s.split("/").length }
+        pathname = pathnames[lengths.index(lengths.min)]
+      end
+      
+      pathname
+    end
+
     def get_product_name
-      xcodeproj_path = Pathname.glob(@current_path.to_s + "/**/*.xcodeproj").first
+      xcodeproj_path = get_shallowest_filepath(@current_path.to_s + "/**/*.xcodeproj")
       File.basename(xcodeproj_path.to_s, ".xcodeproj")
     end
 
     def get_appiconset_path
-      path = Pathname.glob(@current_path.to_s + "/**/*.xcassets").first
+      path = get_shallowest_filepath(@current_path.to_s + "/**/*.xcassets")
       path = path.join("Picon.appiconset")
       path.mkdir unless path.exist?
       path
     end
 
     def get_bundle_identifier
-      pathnames = Pathname.glob(@current_path.to_s + "/**/*-Info.plist")
-      pathnames.reject! { |pathname| pathname.to_s =~ /Test/ }
-      pathname = pathnames.first
+      pathname = get_shallowest_filepath(@current_path.to_s + "/**/*-Info.plist")
       plist = Plist.parse_xml(pathname.to_s)
       plist["CFBundleIdentifier"].gsub!(/\${PRODUCT_NAME.*}$/) { @product_name }
     end
@@ -96,12 +107,12 @@ module Picon
     def edit_project_pbxproj
       data = ""
 
-      pbxproj_path = Pathname.glob(@current_path.to_s + "/**/project.pbxproj").first
+      pbxproj_path = get_shallowest_filepath(@current_path.to_s + "/**/project.pbxproj")
       pbxproj_path.open("rb") do |file|
         data = file.read
       end
 
-      xcworkspace_path = Pathname.glob(@current_path.to_s + "/**/#{@product_name}.xcworkspace").first
+      xcworkspace_path = get_shallowest_filepath(@current_path.to_s + "/**/#{@product_name}.xcworkspace")
       if xcworkspace_path && xcworkspace_path.exist?
         data.gsub!(/(<key>ASSETCATALOG_COMPILER_APPICON_NAME<\/key>\n\t+<string>).+(<\/string>)/) { "#{$1}Picon#{$2}" }
       else
