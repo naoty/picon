@@ -36,10 +36,12 @@ module Picon
       pathnames = Pathname.glob(path)
       pathnames.reject! { |pathname| pathname.to_s =~ /Test/ }
 
-      # pick shallowest file to avoid selecting submodule's one
-      lengths = pathnames.map { |pathname| pathname.to_s.split("/").length }
-      pathname = pathnames[lengths.index(lengths.min)]
-
+      unless pathnames.empty?
+        # pick shallowest file to avoid selecting submodule's one
+        lengths = pathnames.map { |pathname| pathname.to_s.split("/").length }
+        pathname = pathnames[lengths.index(lengths.min)]
+      end
+      
       pathname
     end
 
